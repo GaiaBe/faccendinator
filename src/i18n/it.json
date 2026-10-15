@@ -1,0 +1,32 @@
+{
+  "app": {
+    "title": "Faccendinator"
+  },
+  "setup": {
+    "title": "Configura la tua casa",
+    "addUser": "Aggiungi coinquilino",
+    "roommate": "Coinquilino",
+    "userName": "Nome",
+    "daysHome": "Giorni a casa",
+    "complete": "Inizia!"
+  },
+  "dashboard": {
+    "today": "Oggi",
+    "weekly": "Settimanale",
+    "monthly": "Mensile",
+    "noChores": "Nessuna faccenda per oggi!"
+  },
+  "chores": {
+    "complete": "Completa",
+    "pending": "In sospeso"
+  },
+  "days": {
+    "sun": "Domenica",
+    "mon": "Lunedì",
+    "tue": "Martedì",
+    "wed": "Mercoledì",
+    "thu": "Giovedì",
+    "fri": "Venerdì",
+    "sat": "Sabato"
+  }
+}

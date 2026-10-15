@@ -1,0 +1,32 @@
+{
+  "app": {
+    "title": "Faccendinator"
+  },
+  "setup": {
+    "title": "Setup your home",
+    "addUser": "Add roommate",
+    "roommate": "Roommate",
+    "userName": "Name",
+    "daysHome": "Days at home",
+    "complete": "Start!"
+  },
+  "dashboard": {
+    "today": "Today",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "noChores": "No chores for today!"
+  },
+  "chores": {
+    "complete": "Complete",
+    "pending": "Pending"
+  },
+  "days": {
+    "sun": "Sunday",
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday"
+  }
+}
