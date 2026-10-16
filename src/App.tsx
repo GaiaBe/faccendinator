@@ -7,7 +7,7 @@ function App() {
   const { t } = useTranslation();
   return (
     <Layout>
-      <main className='max-w-2xl mx-auto p-4'>
+      <main className='mx-auto p-4'>
         <UserForm />
         <p className="text-slate-600 px-4">
           {t('setup.title')}

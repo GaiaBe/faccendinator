@@ -27,6 +27,7 @@ const Button = ({label, icon, onClick, variant = "primary"}: ButtonProps) => {
         `
       }
       onClick={onClick}
+      disabled={variant === 'ghost'}
     >
       {icon && <FontAwesomeIcon icon={icon} />}
       {label}
