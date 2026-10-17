@@ -98,6 +98,7 @@ const UserForm = () => {
               </div>
             </Card>
             ))}
+            <Button label="Avanti" onClick={() => {}} />
           </>
         }
       </div>
