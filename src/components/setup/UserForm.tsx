@@ -1,28 +1,28 @@
-import { useTranslation } from "react-i18next";
-import Card from "../common/Card";
-import TextInput from "../common/TextInput";
 import { useState } from "react";
-import Switch from "../common/Switch";
 import { formatDayName, WeekDays } from "../../utils/date";
+import Button from "../common/Button";
+import Card from "../common/Card";
+import Switch from "../common/Switch";
+import TextInput from "../common/TextInput";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { addUser, removeDayFromUser, removeUser } from "../../store/userSlice";
-import Button from "../common/Button";
 import Chip from "../common/Chip";
 
-const UserForm = () => {
+interface UserFormProps {
+  onNext: () => void;
+}
+
+const UserForm = ({onNext}: UserFormProps) => {
   const { t } = useTranslation();
   const [userName, setUserName] = useState<string>('');
   const [userDays, setUserDays] = useState<number[]>([]);
   const { users } = useAppSelector((state) => state.users)
   const dispatch = useAppDispatch();
   return (
-    <div className="flex justify-between items-start gap-10">
-      <div className="flex-[0.3]"></div>
-      <div className="flex-[0.5]">
-        <h2 className="text-slate-600 px-4 py-3 flex justify-center text-2xl">
-          {t('setup.addUser')}
-        </h2>
+    <div className="flex mt-5 flex-col items-center">
+      <div className="w-[50%]">
         <Card title={t('setup.roommate') + ' ' + (users.length + 1)} >
           <div>
             <TextInput
@@ -69,7 +69,7 @@ const UserForm = () => {
           />
         </div>
       </div>
-      <div className="flex gap-4 justify-start flex-[0.3] flex-col">
+      <div className="flex gap-4 justify-start flex-col">
         {users.length > 0 &&
           <>
             <h2 className="text-slate-600 px-4 pt-3 flex justify-center text-2xl">
@@ -98,7 +98,7 @@ const UserForm = () => {
               </div>
             </Card>
             ))}
-            <Button label="Avanti" onClick={() => {}} />
+            <Button label="Avanti" onClick={() => {onNext()}} variant={users.length > 1 ? 'primary' : 'ghost'} />
           </>
         }
       </div>

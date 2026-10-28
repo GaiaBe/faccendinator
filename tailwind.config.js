@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#10B981',
-        negative: '#b71048',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        negative: 'rgb(var(--color-negative) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
